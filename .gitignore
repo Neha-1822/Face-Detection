@@ -1,0 +1,134 @@
+# ============================================================
+# Workplace Monitoring - Git Ignore Configuration
+# ============================================================
+
+# ------------------------------------------------------------
+# Python & Environment
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------
+.env
+.env.local
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Database & Runtime Logs
+# ------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+seat_tracking.db
+*.log
+
+# ------------------------------------------------------------
+# Video Files (CCTV Footage & Recordings)
+# ------------------------------------------------------------
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.m4v
+
+# Specific CCTV video files
+3rd Floor WS.avi
+4Th Floor WS.avi
+Cafeteria.avi
+
+# Detection test clips & report outputs
+detection/reports/
+!detection/reports/.gitkeep
+
+# ------------------------------------------------------------
+# Model Weights & Checkpoints
+# ------------------------------------------------------------
+*.pt
+*.pth
+*.weights
+*.bin
+*.safetensors
+yolo11n.pt
+runs/
+
+# Large ONNX models (uncomment if you prefer not tracking them)
+# *.onnx
+# models/*.onnx
+# !models/.gitkeep
+
+# ------------------------------------------------------------
+# Biometric Datasets & Generated Face Embeddings
+# ------------------------------------------------------------
+# Employee dataset photos (protect employee biometric privacy)
+dataset/
+!dataset/.gitkeep
+
+# Unknown face captures and recognition output
+recognition/unknown_faces/
+!recognition/unknown_faces/.gitkeep
+recognition/output/*.npz
+recognition/output/*.json
+!recognition/output/.gitkeep
+
+# ------------------------------------------------------------
+# Temporary Snapshots & Previews
+# ------------------------------------------------------------
+*.tmp
+*.bak
+snapshot_*.jpg
+monitoring/snapshot_*.jpg
+refined_seats_preview.jpg
+exact_user_seats_preview.jpg
+
+# ------------------------------------------------------------
+# IDE & System Files
+# ------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
