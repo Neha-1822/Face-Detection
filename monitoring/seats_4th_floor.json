@@ -1,0 +1,146 @@
+{
+    "DESK-DSK01": {
+        "name": "Employee-4F-01",
+        "employee_id": "KA001",
+        "rm_email": "neha@kristellar.com",
+        "seat": [120, 100, 280, 220]
+    },
+    "DESK-DSK02": {
+        "name": "Employee-4F-02",
+        "employee_id": "KA002",
+        "rm_email": "neha@kristellar.com",
+        "seat": [300, 100, 460, 220]
+    },
+    "DESK-DSK03": {
+        "name": "Employee-4F-03",
+        "employee_id": "KA003",
+        "rm_email": "neha@kristellar.com",
+        "seat": [480, 100, 640, 220]
+    },
+    "DESK-DSK04": {
+        "name": "Employee-4F-04",
+        "employee_id": "KA005",
+        "rm_email": "neha@kristellar.com",
+        "seat": [680, 100, 840, 220]
+    },
+    "DESK-DSK05": {
+        "name": "Employee-4F-05",
+        "employee_id": "KA007",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 100, 1020, 220]
+    },
+    "DESK-DSK06": {
+        "name": "Employee-4F-06",
+        "employee_id": "KA012",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1040, 100, 1200, 220]
+    },
+    "DESK-DSK07": {
+        "name": "Employee-4F-07",
+        "employee_id": "KA016",
+        "rm_email": "neha@kristellar.com",
+        "seat": [120, 240, 280, 360]
+    },
+    "DESK-DSK08": {
+        "name": "Employee-4F-08",
+        "employee_id": "KA019",
+        "rm_email": "neha@kristellar.com",
+        "seat": [300, 240, 460, 360]
+    },
+    "DESK-DSK09": {
+        "name": "Employee-4F-09",
+        "employee_id": "KA020",
+        "rm_email": "neha@kristellar.com",
+        "seat": [480, 240, 640, 360]
+    },
+    "DESK-DSK10": {
+        "name": "Employee-4F-10",
+        "employee_id": "KA023",
+        "rm_email": "neha@kristellar.com",
+        "seat": [680, 240, 840, 360]
+    },
+    "DESK-DSK11": {
+        "name": "Employee-4F-11",
+        "employee_id": "KA024",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 240, 1020, 360]
+    },
+    "DESK-DSK12": {
+        "name": "Employee-4F-12",
+        "employee_id": "KA026",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1040, 240, 1200, 360]
+    },
+    "DESK-DSK13": {
+        "name": "Employee-4F-13",
+        "employee_id": "KA027",
+        "rm_email": "neha@kristellar.com",
+        "seat": [120, 390, 280, 510]
+    },
+    "DESK-DSK14": {
+        "name": "Employee-4F-14",
+        "employee_id": "KA028",
+        "rm_email": "neha@kristellar.com",
+        "seat": [300, 390, 460, 510]
+    },
+    "DESK-DSK15": {
+        "name": "Employee-4F-15",
+        "employee_id": "KA032",
+        "rm_email": "neha@kristellar.com",
+        "seat": [480, 390, 640, 510]
+    },
+    "DESK-DSK16": {
+        "name": "Employee-4F-16",
+        "employee_id": "KA033",
+        "rm_email": "neha@kristellar.com",
+        "seat": [680, 390, 840, 510]
+    },
+    "DESK-DSK17": {
+        "name": "Employee-4F-17",
+        "employee_id": "KA034",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 390, 1020, 510]
+    },
+    "DESK-DSK18": {
+        "name": "Employee-4F-18",
+        "employee_id": "KA035",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1040, 390, 1200, 510]
+    },
+    "DESK-DSK19": {
+        "name": "Employee-4F-19",
+        "employee_id": "KA036",
+        "rm_email": "neha@kristellar.com",
+        "seat": [120, 540, 280, 680]
+    },
+    "DESK-DSK20": {
+        "name": "Employee-4F-20",
+        "employee_id": "KA037",
+        "rm_email": "neha@kristellar.com",
+        "seat": [300, 540, 460, 680]
+    },
+    "DESK-DSK21": {
+        "name": "Employee-4F-21",
+        "employee_id": "KA041",
+        "rm_email": "neha@kristellar.com",
+        "seat": [480, 540, 640, 680]
+    },
+    "DESK-DSK22": {
+        "name": "Employee-4F-22",
+        "employee_id": "KA042",
+        "rm_email": "neha@kristellar.com",
+        "seat": [680, 540, 840, 680]
+    },
+    "DESK-DSK23": {
+        "name": "Employee-4F-23",
+        "employee_id": "KA043",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 540, 1020, 680]
+    },
+    "DESK-DSK24": {
+        "name": "Employee-4F-24",
+        "employee_id": "KA044",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1040, 540, 1200, 680]
+    }
+}

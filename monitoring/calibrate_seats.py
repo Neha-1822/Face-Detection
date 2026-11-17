@@ -14,6 +14,7 @@ Use this tool to visually configure seat zones on the camera view.
 import cv2
 import json
 import os
+import re
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,8 +55,10 @@ def load_seats():
     return {}
 
 def save_seats(seats):
+    raw = json.dumps(seats, indent=4)
+    compact = re.sub(r'"seat":\s*\[\s*(\d+),\s*(\d+),\s*(\d+),\s*(\d+)\s*\]', r'"seat": [\1, \2, \3, \4]', raw)
     with open(CONFIG_PATH, "w", encoding="utf-8") as f:
-        json.dump(seats, f, indent=4)
+        f.write(compact)
     print(f"[SUCCESS] Saved {len(seats)} seats to {CONFIG_PATH}")
 
 class SeatCalibrator:
@@ -93,20 +96,17 @@ class SeatCalibrator:
 
     def prompt_new_seat(self, box):
         print("\n--- ADD NEW SEAT ---")
-        default_id = f"WS-{len(self.seats) + 1:02d}"
+        default_id = f"DESK-DSK{len(self.seats) + 1:02d}"
         sid = input(f"Enter Seat ID [{default_id}]: ").strip() or default_id
         name = input("Enter Employee Name: ").strip() or "Employee"
-        emp_id = input("Enter Enrolled Employee ID (e.g. KA019) [Optional]: ").strip()
-        email = input("Enter Employee Email [Optional]: ").strip()
-        rm_email = input("Enter Manager Email [Optional]: ").strip()
+        emp_id = input("Enter Enrolled Employee ID (e.g. KA001) [Optional]: ").strip()
+        rm_email = input("Enter Manager Email [Optional, default: neha@kristellar.com]: ").strip()
 
         self.seats[sid] = {
             "name": name,
             "employee_id": emp_id,
-            "email": email or f"{name.lower().replace(' ', '')}@kristellar.com",
-            "rm_email": rm_email or "manager@kristellar.com",
-            "seat": list(box),
-            "desc": f"Workstation {sid}"
+            "rm_email": rm_email or "neha@kristellar.com",
+            "seat": list(box)
         }
         self.selected_sid = sid
         print(f"[ADDED] {sid} at {box}")

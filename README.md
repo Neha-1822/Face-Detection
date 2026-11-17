@@ -163,7 +163,7 @@ If your camera angle changes or you want to add/modify workstation desk zones:
 python monitoring/calibrate_seats.py
 ```
 - **Left Click & Drag**: Draw a new workstation bounding box.
-- **Terminal Prompt**: Enter Seat ID (`WS-01`), Assigned Name, and Enrolled ID (`KA019`).
+- **Terminal Prompt**: Enter Seat ID (`DESK-DSK01`), Assigned Name, and Enrolled ID (`KA001`).
 - **Right Click**: Select an existing seat box.
 - **`S`**: Save coordinates to `monitoring/seats_3rd_floor.json`.
 - **`D`**: Delete selected seat.
@@ -173,15 +173,57 @@ python monitoring/calibrate_seats.py
 
 ### Step 3: Run Seat Monitoring
 
-To start the seat monitoring system:
+To start the continuous seat monitoring system:
 ```powershell
 python monitoring/seat_monitor.py
 ```
 
-#### Hotkey Controls During Monitoring:
+#### Run Workstation Monitoring by Floor:
+```powershell
+# 3rd Floor Main Workstations (28 Desks):
+python monitoring/seat_monitor.py --floor 3 --source "3rd Floor WS.avi"
+
+# 3rd Floor Workstation Area 2 (9 Desks):
+python monitoring/seat_monitor.py --floor 3-area2 --source "path/to/3rd_floor_area2.mp4"
+
+# 4th Floor Workstations (24 Desks):
+python monitoring/seat_monitor.py --floor 4 --source "path/to/4th_floor_ws.mp4"
+```
+
+#### Run Cafeteria & Lounge Monitor:
+```powershell
+python monitoring/cafeteria_monitor.py --source "rtsp://admin:password@CAFETERIA_IP:554/profile2/media.smp"
+```
+
+#### Office Break Schedules & Post-Break Alerts:
+- **3rd Floor Breaks**: Morning `11:15 - 11:30 AM` | Lunch `01:00 - 02:00 PM` | Evening `04:15 - 04:30 PM`
+- **4th Floor Breaks**: Morning `11:00 - 11:15 AM` | Lunch `01:00 - 02:00 PM` | Evening `04:00 - 04:15 PM`
+- **Break Timer Freezing**: All breaks are paused and do NOT count against the 10-minute absence limit.
+- **Post-Break Alerts**: Automatically triggers an email notification to the Reporting Manager (RM) if:
+  1. An employee is **not back in their seat** after any break ends (Morning, Lunch, or Evening).
+  2. An employee is **seen in the cafeteria** after their floor's break ends.
+- **Continuous 10-Minute Absence Tracking**: Resumes during active work hours before and after all breaks.
+
+#### Run with Custom Video Sources or Live Camera:
+```powershell
+# Run with a specific video file:
+python monitoring/seat_monitor.py --source "3rd_floor_full.mp4"
+
+# Run with a live webcam:
+python monitoring/seat_monitor.py --source 0
+
+# Run with a live RTSP IP camera:
+python monitoring/seat_monitor.py --source "rtsp://username:password@192.168.1.100:554/stream1"
+```
+
+> [!NOTE]
+> The monitor runs **continuously in an infinite loop** and will **never exit automatically**. For video files, it seamlessly loops playback and maintains ongoing absence timers. For live RTSP streams, it automatically reconnects on network interruptions. It will only stop when you explicitly exit.
+
+#### Controls During Monitoring:
 | Key | Action |
 | :---: | :--- |
-| **`Q` / `ESC`** | Quit application and release camera |
+| **`Q` / `ESC`** | Quit monitoring and close session |
+| **Window `[X]`** | Close window and exit session |
 | **`P`** | Pause / resume video playback |
 | **`S`** | Save current frame snapshot with bounding box overlays |
 | **`C`** | Toggle workstation seat rectangles on/off |
@@ -215,13 +257,11 @@ python monitoring/seat_monitor.py
 ### Workstation Seats (`monitoring/seats_3rd_floor.json`)
 Each workstation is represented as:
 ```json
-"WS-13": {
+"DESK-DSK13": {
     "name": "Employee-13",
     "employee_id": "KA036",
-    "email": "emp13@kristellar.com",
-    "rm_email": "manager@kristellar.com",
-    "seat": [941, 100, 996, 156],
-    "desc": "Right Mid Desk (Blue Shirt)"
+    "rm_email": "neha@kristellar.com",
+    "seat": [941, 100, 996, 156]
 }
 ```
 
@@ -231,18 +271,21 @@ Each workstation is represented as:
 - **`EMPTY_CONFIRM_SECONDS`**: Debounce time before starting an absence record (default: `5` seconds).
 - **`DETECTION_INTERVAL`**: Run neural models every `N` frames to maintain high processing FPS.
 
-### Email Alerts Setup
-To enable email alerts when an employee's absence exceeds the threshold:
+### Email Alerts Setup (10-Minute Absence Notification)
+The system automatically sends an email to the Reporting Manager (`rm_email`) when an employee is absent for 10 minutes:
 1. Copy `.env.example` to `.env`:
    ```powershell
-   cp .env.example .env
+   Copy-Item .env.example .env
    ```
-2. Enter your sender email and application password:
+2. Enter your sender email and Gmail App Password:
    ```env
+   ENABLE_EMAIL_ALERTS=true
    SENDER_EMAIL=your_alerts_email@gmail.com
    SENDER_APP_PASSWORD=your_16_character_app_password
+   DEFAULT_RM_EMAIL=neha@kristellar.com
+   ABSENCE_LIMIT_SECONDS=600
    ```
-3. Set `ENABLE_EMAIL_ALERTS = True` in `monitoring/seat_monitor.py`.
+3. If credentials are not yet entered, the system will run in **Simulation Mode** (logging the full email content and recipient details directly to the console). Once credentials are added to `.env`, real emails are dispatched immediately via TLS SMTP.
 
 ---
 
@@ -253,7 +296,7 @@ Absence events are recorded in the `absences` table:
 | Column | Type | Description |
 | :--- | :--- | :--- |
 | `id` | `INTEGER` | Primary key (auto-increment) |
-| `seat_id` | `TEXT` | Workstation ID (e.g., `WS-13`) |
+| `seat_id` | `TEXT` | Workstation ID (e.g., `DESK-DSK13`) |
 | `employee_name` | `TEXT` | Assigned employee name |
 | `absence_start` | `TEXT` | ISO 8601 start timestamp |
 | `absence_end` | `TEXT` | ISO 8601 end timestamp (when employee returns) |

@@ -1,0 +1,56 @@
+{
+    "DESK-DSK01": {
+        "name": "Employee-A2-01",
+        "employee_id": "KA001",
+        "rm_email": "neha@kristellar.com",
+        "seat": [220, 160, 420, 320]
+    },
+    "DESK-DSK02": {
+        "name": "Employee-A2-02",
+        "employee_id": "KA002",
+        "rm_email": "neha@kristellar.com",
+        "seat": [540, 160, 740, 320]
+    },
+    "DESK-DSK03": {
+        "name": "Employee-A2-03",
+        "employee_id": "KA003",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 160, 1060, 320]
+    },
+    "DESK-DSK04": {
+        "name": "Employee-A2-04",
+        "employee_id": "KA005",
+        "rm_email": "neha@kristellar.com",
+        "seat": [220, 350, 420, 510]
+    },
+    "DESK-DSK05": {
+        "name": "Employee-A2-05",
+        "employee_id": "KA007",
+        "rm_email": "neha@kristellar.com",
+        "seat": [540, 350, 740, 510]
+    },
+    "DESK-DSK06": {
+        "name": "Employee-A2-06",
+        "employee_id": "KA012",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 350, 1060, 510]
+    },
+    "DESK-DSK07": {
+        "name": "Employee-A2-07",
+        "employee_id": "KA016",
+        "rm_email": "neha@kristellar.com",
+        "seat": [220, 530, 420, 690]
+    },
+    "DESK-DSK08": {
+        "name": "Employee-A2-08",
+        "employee_id": "KA019",
+        "rm_email": "neha@kristellar.com",
+        "seat": [540, 530, 740, 690]
+    },
+    "DESK-DSK09": {
+        "name": "Employee-A2-09",
+        "employee_id": "KA020",
+        "rm_email": "neha@kristellar.com",
+        "seat": [860, 530, 1060, 690]
+    }
+}

@@ -132,8 +132,15 @@ try:
         success, frame = cap.read()
 
         if not success:
-            print("[INFO] Video completed")
-            break
+            print("[INFO] Video reached end. Looping playback...")
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            success, frame = cap.read()
+            if not success:
+                cap.release()
+                cap = cv2.VideoCapture(str(VIDEO_PATH))
+                success, frame = cap.read()
+            if not success:
+                break
 
         _, faces = detector.detect(frame)
 

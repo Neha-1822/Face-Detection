@@ -1,236 +1,170 @@
 {
-    "WS-01": {
+    "DESK-DSK01": {
         "name": "Staff",
-        "employee_id": "",
-        "email": "staff@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            310,
-            114,
-            450,
-            190
-        ],
-        "desc": "Left Counter / Desk"
+        "employee_id": "KA001",
+        "rm_email": "neha@kristellar.com",
+        "seat": [310, 114, 450, 190]
     },
-    "WS-02": {
-        "name": "Rahul",
-        "employee_id": "KA012",
-        "email": "rahul@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            456,
-            66,
-            552,
-            143
-        ],
-        "desc": "Left Back Workstation"
+    "DESK-DSK02": {
+        "name": "Aishwarya",
+        "employee_id": "KA028",
+        "rm_email": "neha@kristellar.com",
+        "seat": [456, 66, 552, 143]
     },
-    "WS-03": {
-        "name": "Neha",
-        "employee_id": "KA019",
-        "email": "neha@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            456,
-            135,
-            555,
-            288
-        ],
-        "desc": "Left Front (Woman sitting)"
+    "DESK-DSK03": {
+        "name": "Avilasha",
+        "employee_id": "KA034",
+        "rm_email": "neha@kristellar.com",
+        "seat": [456, 135, 555, 288]
     },
-    "WS-04": {
+    "DESK-DSK04": {
         "name": "Employee-04",
         "employee_id": "KA028",
-        "email": "employee-04@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            300,
-            485,
-            550,
-            645
-        ],
-        "desc": "Foreground Left Front"
+        "rm_email": "neha@kristellar.com",
+        "seat": [300, 485, 550, 645]
     },
-    "WS-05": {
+    "DESK-DSK05": {
         "name": "Employee-05",
         "employee_id": "KA027",
-        "email": "employee-05@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            531,
-            324,
-            770,
-            467
-        ],
-        "desc": "Foreground Center Back (Blue Jacket)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [531, 324, 770, 467]
     },
-    "WS-06": {
+    "DESK-DSK06": {
         "name": "Employee-06",
         "employee_id": "KA032",
-        "email": "employee-06@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            778,
-            387,
-            1051,
-            625
-        ],
-        "desc": "Foreground Right Front (Laptop & Cushion)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [778, 387, 1051, 625]
     },
-    "WS-07": {
+    "DESK-DSK07": {
         "name": "Employee-07",
         "employee_id": "KA035",
-        "email": "employee-07@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            565,
-            105,
-            659,
-            225
-        ],
-        "desc": "Center Mid-Left Desk"
+        "rm_email": "neha@kristellar.com",
+        "seat": [565, 105, 659, 225]
     },
-    "WS-08": {
+    "DESK-DSK08": {
         "name": "Employee-08",
         "employee_id": "KA037",
-        "email": "employee-08@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            661,
-            49,
-            718,
-            105
-        ],
-        "desc": "Center Deep-Back Left"
+        "rm_email": "neha@kristellar.com",
+        "seat": [661, 49, 718, 105]
     },
-    "WS-09": {
+    "DESK-DSK09": {
         "name": "Employee-09",
         "employee_id": "KA041",
-        "email": "employee-09@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            725,
-            26,
-            786,
-            61
-        ],
-        "desc": "Center Far-Back Wall Left"
+        "rm_email": "neha@kristellar.com",
+        "seat": [725, 26, 786, 61]
     },
-    "WS-10": {
+    "DESK-DSK10": {
         "name": "Employee-10",
         "employee_id": "KA042",
-        "email": "employee-10@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            729,
-            63,
-            776,
-            152
-        ],
-        "desc": "Center Far-Back Wall Right"
+        "rm_email": "neha@kristellar.com",
+        "seat": [729, 63, 776, 152]
     },
-    "WS-11": {
+    "DESK-DSK11": {
         "name": "Employee-11",
         "employee_id": "KA043",
-        "email": "employee-11@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            792,
-            43,
-            856,
-            95
-        ],
-        "desc": "Center Far-Back Right (Under IATC)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [792, 43, 856, 95]
     },
-    "WS-12": {
+    "DESK-DSK12": {
         "name": "Employee-12",
         "employee_id": "KA044",
-        "email": "employee-12@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            881,
-            136,
-            958,
-            244
-        ],
-        "desc": "Right Mid Desk (Khaki Shirt)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [881, 136, 958, 244]
     },
-    "WS-13": {
+    "DESK-DSK13": {
         "name": "Employee-13",
         "employee_id": "KA036",
-        "email": "employee-13@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            941,
-            99,
-            996,
-            157
-        ],
-        "desc": "Right Mid Desk (Blue Shirt)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [941, 99, 996, 157]
     },
-    "WS-14": {
+    "DESK-DSK14": {
         "name": "Employee-14",
         "employee_id": "KA045",
-        "email": "employee-14@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            1012,
-            89,
-            1061,
-            131
-        ],
-        "desc": "Right Back Desk - Top Left"
+        "rm_email": "neha@kristellar.com",
+        "seat": [1012, 89, 1061, 131]
     },
-    "WS-15": {
+    "DESK-DSK15": {
         "name": "Employee-15",
         "employee_id": "KA026",
-        "email": "employee-15@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            1054,
-            139,
-            1124,
-            192
-        ],
-        "desc": "Right Mid-Back Desk"
+        "rm_email": "neha@kristellar.com",
+        "seat": [1054, 139, 1124, 192]
     },
-    "WS-16": {
+    "DESK-DSK16": {
         "name": "Employee-16",
         "employee_id": "KA046",
-        "email": "employee-16@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            1032,
-            192,
-            1121,
-            250
-        ],
-        "desc": "Right Mid-Near Desk"
+        "rm_email": "neha@kristellar.com",
+        "seat": [1032, 192, 1121, 250]
     },
-    "WS-17": {
+    "DESK-DSK17": {
         "name": "Employee-17",
         "employee_id": "KA051",
-        "email": "employee-17@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            1090,
-            91,
-            1125,
-            135
-        ],
-        "desc": "Right Back Desk - Top Mid"
+        "rm_email": "neha@kristellar.com",
+        "seat": [1090, 91, 1125, 135]
     },
-    "WS-18": {
+    "DESK-DSK18": {
         "name": "Employee-18",
         "employee_id": "KA052",
-        "email": "employee-18@kristellar.com",
-        "rm_email": "manager@kristellar.com",
-        "seat": [
-            1115,
-            64,
-            1152,
-            109
-        ],
-        "desc": "Right Far-Back Desk (Near Door)"
+        "rm_email": "neha@kristellar.com",
+        "seat": [1115, 64, 1152, 109]
+    },
+    "DESK-DSK19": {
+        "name": "Employee-19",
+        "employee_id": "KA041",
+        "rm_email": "neha@kristellar.com",
+        "seat": [801, 80, 880, 174]
+    },
+    "DESK-DSK20": {
+        "name": "Employee-20",
+        "employee_id": "KA042",
+        "rm_email": "neha@kristellar.com",
+        "seat": [801, 175, 880, 310]
+    },
+    "DESK-DSK21": {
+        "name": "Employee-21",
+        "employee_id": "KA043",
+        "rm_email": "neha@kristellar.com",
+        "seat": [881, 80, 940, 174]
+    },
+    "DESK-DSK22": {
+        "name": "Employee-22",
+        "employee_id": "KA044",
+        "rm_email": "neha@kristellar.com",
+        "seat": [881, 175, 940, 310]
+    },
+    "DESK-DSK23": {
+        "name": "Employee-23",
+        "employee_id": "KA001",
+        "rm_email": "neha@kristellar.com",
+        "seat": [200, 485, 300, 645]
+    },
+    "DESK-DSK24": {
+        "name": "Employee-24",
+        "employee_id": "KA002",
+        "rm_email": "neha@kristellar.com",
+        "seat": [200, 350, 310, 484]
+    },
+    "DESK-DSK25": {
+        "name": "Employee-25",
+        "employee_id": "KA003",
+        "rm_email": "neha@kristellar.com",
+        "seat": [311, 191, 455, 320]
+    },
+    "DESK-DSK26": {
+        "name": "Employee-26",
+        "employee_id": "KA005",
+        "rm_email": "neha@kristellar.com",
+        "seat": [997, 136, 1053, 220]
+    },
+    "DESK-DSK27": {
+        "name": "Employee-27",
+        "employee_id": "KA007",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1126, 91, 1175, 155]
+    },
+    "DESK-DSK28": {
+        "name": "Employee-28",
+        "employee_id": "KA016",
+        "rm_email": "neha@kristellar.com",
+        "seat": [1153, 64, 1220, 120]
     }
 }
